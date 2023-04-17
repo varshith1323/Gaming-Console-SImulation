@@ -1,6 +1,6 @@
 # Gaming-Console-SImulation
 
-[This project has been implemented in both Java and CPP]
+[This project has been implemented in both Java and CPP separately]
 
 This software simulates the working of a gaming console which allows you to plug in various games and play any of them using a standard
 interface which has a set of buttons or similar input mechanisms. 
