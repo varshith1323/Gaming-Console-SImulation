@@ -29,6 +29,7 @@ In a second iteration of the design, the manufacturer decides to make some of th
 “paid”, but does not want to change the design of Game, since there will still be free games. So,
 instead, they design an add-on property called “chargeable”. We can model this with a Java
 interface Chargeable which contains a single method:
+
 1. Recharge: takes an integer as an argument which is the amount of money added to the
 Chargeable object.
 (Note that types other than Games can enhance their functionality by adding the “chargeable”
@@ -41,10 +42,13 @@ FlightSimple is a simple flight simulator, but a paid game. The objective is to 
 it back safely. It interprets the 4 keys as follows:
 
 R: increase speed by 1 unit
+
 L: reduce speed by 1 unit. Speed cannot go below 0. Reducing the speed to 0 when you
 are flying causes the plane to crash and you have lost the game.
+
 U: increase altitude by 1 unit. Altitude can be increased from 0 only if speed is greater
 than 2 units. Otherwise this command is ignored.
+
 D: reduce height by 1 unit. Reducing below 0 results in a crash and you have lost the
 game
 
@@ -94,17 +98,32 @@ amount of recharge. This is followed in the next line by a series of characters,
 An End as the name of the game implies end of play
 
 Sample Input:
+
 FlightSimple 12
+
 R R R U U R D L D D L R
+
 RandomWalk
+
 R R R U U R D L D D R
+
 RandomWalk
+
 R R R U U R D L D U R R U U U U U U U U
+
 FlightSimple 20
+
 R R U R U R R U D D L D L L L L L L L L
+
 End
+
 Output
+
 FlightSimple: Lost
+
 RandomWalk: Game Over
+
 RandomWalk: Lost
+
 FlightSimple: Won
+
